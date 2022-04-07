@@ -1,22 +1,22 @@
 /**
  * Specific eslint rules for this app/package, extends the base rules
- * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
+ * @see https://github.com/mqschwanda/nextjs-monorepo/blob/main/docs/about-linters.md
  */
 
 const {
   getDefaultIgnorePatterns,
-} = require('@your-org/eslint-config-bases/helpers');
+} = require('@mqs/eslint-config-bases/helpers');
 
 module.exports = {
   root: true,
   ignorePatterns: [...getDefaultIgnorePatterns(), 'src/generated'],
   extends: [
-    '@your-org/eslint-config-bases/typescript',
-    '@your-org/eslint-config-bases/sonar',
-    '@your-org/eslint-config-bases/regexp',
-    '@your-org/eslint-config-bases/jest',
+    '@mqs/eslint-config-bases/typescript',
+    '@mqs/eslint-config-bases/sonar',
+    '@mqs/eslint-config-bases/regexp',
+    '@mqs/eslint-config-bases/jest',
     // Apply prettier and disable incompatible rules
-    '@your-org/eslint-config-bases/prettier',
+    '@mqs/eslint-config-bases/prettier',
   ],
   rules: {
     // optional overrides per project

@@ -1,6 +1,6 @@
 import { InternalServerError } from '@tsed/exceptions';
-import type { UnPromisify } from '@your-org/core-lib';
-import type { PrismaClientDbMain } from '@your-org/db-main-prisma';
+import type { UnPromisify } from '@mqs/core-lib';
+import type { PrismaClientDbMain } from '@mqs/db-main-prisma';
 import type { SearchPoemsParams } from './SearchPoems.types';
 
 type SearchPoems = UnPromisify<ReturnType<SearchPoemsQuery['searchPoems']>>;

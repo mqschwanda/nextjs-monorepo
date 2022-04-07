@@ -1,17 +1,17 @@
 {
-  "name": "@your-org/ui-lib",
+  "name": "@mqs/ui-lib",
   "version": "3.12.2",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/nextjs-monorepo-example",
+  "homepage": "https://github.com/mqschwanda/nextjs-monorepo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/nextjs-monorepo-example",
+    "url": "https://github.com/mqschwanda/nextjs-monorepo",
     "directory": "packages/ui-lib"
   },
   "author": {
-    "name": "Vanvelthem Sébastien",
-    "url": "https://github.com/belgattitude"
+    "name": "Mark Q Schwanda",
+    "url": "https://github.com/mqschwanda"
   },
   "sideEffects": false,
   "source": "src/index.ts",
@@ -34,13 +34,13 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@your-org/core-lib": "workspace:^",
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "@mqs/core-lib": "workspace:^"
   },
   "peerDependencies": {
     "@types/react": "^17.0.44 || ^18.0.0",
-    "@types/react-dom": "^17.0.44 || ^18.0.0"
+    "@types/react-dom": "^17.0.44 || ^18.0.0",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -71,7 +71,7 @@
     "@types/node": "17.0.24",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
-    "@your-org/eslint-config-bases": "workspace:^",
+    "@mqs/eslint-config-bases": "workspace:^",
     "autoprefixer": "10.4.4",
     "babel-loader": "8.2.4",
     "babel-plugin-macros": "3.1.0",

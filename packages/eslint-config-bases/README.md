@@ -1,15 +1,15 @@
-# @your-org/eslint-config-bases
+# @mqs/eslint-config-bases
 
 <p align="left">
-  <a aria-label="Build" href="https://github.com/belgattitude/nextjs-monorepo-example/actions?query=workflow%3ACI">
-    <img alt="build" src="https://img.shields.io/github/workflow/status/belgattitude/nextjs-monorepo-example/CI-web-app/main?label=CI&logo=github&style=flat-quare&labelColor=000000" />
+  <a aria-label="Build" href="https://github.com/mqschwanda/nextjs-monorepo/actions?query=workflow%3ACI">
+    <img alt="build" src="https://img.shields.io/github/workflow/status/mqschwanda/nextjs-monorepo/CI-web-app/main?label=CI&logo=github&style=flat-quare&labelColor=000000" />
   </a>
 </p>
 
 # About
 
 Example of composable eslint config bases that can be easily shared and fine-tuned by apps and
-packages that lives in a [monorepo](https://github.com/belgattitude/nextjs-monorepo-example).
+packages that lives in a [monorepo](https://github.com/mqschwanda/nextjs-monorepo).
 
 ## Features
 
@@ -22,7 +22,7 @@ packages that lives in a [monorepo](https://github.com/belgattitude/nextjs-monor
 ## Install
 
 ```bash
-$ yarn add --dev eslint @your-org/eslint-config-bases:"workspace:^"
+$ yarn add --dev eslint @mqs/eslint-config-bases:"workspace:^"
 ```
 
 > **Tip** the [workspace:^](https://yarnpkg.com/features/workspaces#workspace-ranges-workspace) is supported by yarn and pnpm.
@@ -37,15 +37,15 @@ module.exports = {
   root: true, // Be sure to set root to true in monorepo.
   ignorePatterns: ["**/node_modules", "**/.cache", "build", ".next"],
   extends: [
-    "@your-org/eslint-config-bases/typescript",
-    "@your-org/eslint-config-bases/sonar",
-    "@your-org/eslint-config-bases/regexp",
-    "@your-org/eslint-config-bases/react",
-    "@your-org/eslint-config-bases/jest",
-    "@your-org/eslint-config-bases/rtl",
-    "@your-org/eslint-config-bases/graphql-schema",
-    "@your-org/eslint-config-bases/storybook",
-    "@your-org/eslint-config-bases/playwright",
+    "@mqs/eslint-config-bases/typescript",
+    "@mqs/eslint-config-bases/sonar",
+    "@mqs/eslint-config-bases/regexp",
+    "@mqs/eslint-config-bases/react",
+    "@mqs/eslint-config-bases/jest",
+    "@mqs/eslint-config-bases/rtl",
+    "@mqs/eslint-config-bases/graphql-schema",
+    "@mqs/eslint-config-bases/storybook",
+    "@mqs/eslint-config-bases/playwright",
 
     // Add specific rules for your framework if needed.
     // ie:
@@ -55,7 +55,7 @@ module.exports = {
 
     // Post configure the prettier base so there won't be
     // any conficts between eslint / prettier
-    "@your-org/eslint-config-bases/prettier",
+    "@mqs/eslint-config-bases/prettier",
   ],
   rules: {
     // Specific global rules for your app or package
@@ -66,7 +66,7 @@ module.exports = {
 };
 ```
 
-> **Tip:** "@your-org/eslint-config-bases/prettier" must be set at the end to disable any
+> **Tip:** "@mqs/eslint-config-bases/prettier" must be set at the end to disable any
 > conflicting rules.
 
 ## Bases
@@ -99,10 +99,10 @@ You can find the bases in [./src/bases](./src/bases).
 
 ## Prettier integration
 
-To prevent conflicts between prettier and eslint, you must re-export the prettier base from `@your-org/eslint-config-bases`.
+To prevent conflicts between prettier and eslint, you must re-export the prettier base from `@mqs/eslint-config-bases`.
 
 ```javascript
-const { getPrettierConfig } = require("@your-org/eslint-config-bases/helpers");
+const { getPrettierConfig } = require("@mqs/eslint-config-bases/helpers");
 module.exports = {
   ...prettierConfig,
   overrides: [

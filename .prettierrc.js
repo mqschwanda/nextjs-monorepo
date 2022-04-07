@@ -4,7 +4,7 @@
  * @type {import('prettier').Config}
  */
 
-const { getPrettierConfig } = require('@your-org/eslint-config-bases/helpers');
+const { getPrettierConfig } = require('@mqs/eslint-config-bases/helpers');
 
 const { overrides = [], ...prettierConfig } = getPrettierConfig();
 

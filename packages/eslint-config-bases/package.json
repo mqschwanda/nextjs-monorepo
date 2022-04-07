@@ -1,17 +1,17 @@
 {
-  "name": "@your-org/eslint-config-bases",
+  "name": "@mqs/eslint-config-bases",
   "version": "1.2.0",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/nextjs-monorepo-example",
+  "homepage": "https://github.com/mqschwanda/nextjs-monorepo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/nextjs-monorepo-example",
+    "url": "https://github.com/mqschwanda/nextjs-monorepo",
     "directory": "packages/eslint-config-bases"
   },
   "author": {
     "name": "Vanvelthem Sébastien",
-    "url": "https://github.com/belgattitude"
+    "url": "https://github.com/mqschwanda"
   },
   "type": "commonjs",
   "main": "./index.js",
