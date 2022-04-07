@@ -84,11 +84,6 @@ If needed static resources like **locales**, **images**,... can be shared by usi
 ```
 .
 ├── apps
-│   ├── vite-app                 (Vite app as an example)
-│   │   ├── src/
-│   │   ├── package.json         (define package workspace:package deps)
-│   │   └── tsconfig.json        (define path to packages)
-│   │
 │   └── nextjs-app                  (NextJS app with api-routes)
 │       ├── e2e/                 (E2E tests with playwright)
 │       ├── public/
