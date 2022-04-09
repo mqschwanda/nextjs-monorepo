@@ -1,4 +1,5 @@
 import { ArrayUtils } from '@mqs/core-lib';
+import { Grid } from '@mqs/ui-lib';
 import type { FC } from 'react';
 import type { SearchPoems } from '@/backend/features/poem/SearchPoems';
 import { PoemCard } from './PoemCard';
@@ -14,7 +15,7 @@ export const PoemGrid: FC<{ poems: SearchPoems; children?: never }> = (
   const { poems } = props;
   let images = waterImages;
   return (
-    <div className="flex flex-wrap">
+    <Grid container spacing={1}>
       {poems.map((poem) => {
         const randomImg = ArrayUtils.getRandom(images);
         const defaultImg = `/_next/image?url=${encodeURIComponent(
@@ -32,21 +33,17 @@ export const PoemGrid: FC<{ poems: SearchPoems; children?: never }> = (
           .join(',')}`;
 
         return (
-          <div
-            key={`${poem.id}`}
-            className="m-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6"
-          >
+          <Grid item xs={12} md={6} lg={4} key={`${poem.id}`}>
             <PoemCard
-              title={poem.title}
-              content={poem.content}
-              author={poem.author}
-              keywords={poem.keywords}
-              img={unsplashImg}
+              poem={{
+                ...poem,
+                image: unsplashImg,
+              }}
               defaultImg={defaultImg}
             />
-          </div>
+          </Grid>
         );
       })}
-    </div>
+    </Grid>
   );
 };
