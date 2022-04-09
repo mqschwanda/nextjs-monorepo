@@ -47,7 +47,7 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mdx,.graphql --cache",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mdx,.graphql --fix",
     "?postinstall": "@todo: the prisma generate seems to be required, but is installed at the root",
-    "postinstall": "test -n \"$SKIP_POSTINSTALL\" || yarn workspace @your-org/db-main-prisma run prisma generate"
+    "postinstall": "test -n \"$SKIP_POSTINSTALL\" || yarn workspace @mqs/db-main-prisma run prisma generate"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.9.2",
@@ -111,13 +111,10 @@
     "@mqs/core-lib": "workspace:^",
     "@mqs/db-main-prisma": "workspace:^",
     "@mqs/ui-lib": "workspace:^",
-    "@sentry/nextjs": "6.19.4",
-    "@sentry/react": "6.19.4",
+    "@sentry/nextjs": "6.19.6",
+    "@sentry/react": "6.19.6",
     "@soluble/cache-ioredis": "0.8.6",
     "@tsed/exceptions": "6.113.0",
-    "@your-org/core-lib": "workspace:^",
-    "@your-org/db-main-prisma": "workspace:^",
-    "@your-org/ui-lib": "workspace:^",
     "apollo-server-core": "3.6.7",
     "apollo-server-micro": "3.6.7",
     "axios": "0.26.1",
