@@ -3329,8 +3329,8 @@ __metadata:
     "@tsed/exceptions": ^6.110.2
     "@types/jest": 27.4.1
     "@types/node": 17.0.23
-    "@types/react": 18.0.1
-    "@types/react-dom": 18.0.0
+    "@types/react": 17.0.43
+    "@types/react-dom": 17.0.14
     "@typescript-eslint/eslint-plugin": 5.18.0
     "@typescript-eslint/parser": 5.18.0
     cross-env: 7.0.3
@@ -3431,8 +3431,8 @@ __metadata:
     "@testing-library/react-hooks": 7.0.2
     "@types/jest": 27.4.1
     "@types/node": 17.0.23
-    "@types/react": 18.0.1
-    "@types/react-dom": 18.0.0
+    "@types/react": 17.0.43
+    "@types/react-dom": 17.0.14
     "@typescript-eslint/eslint-plugin": 5.18.0
     "@typescript-eslint/parser": 5.18.0
     autoprefixer: 10.4.4
@@ -7044,26 +7044,21 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react-dom@npm:18.0.1, @types/react-dom@npm:^18.0.0":
   version: 18.0.1
   resolution: "@types/react-dom@npm:18.0.1"
 =======
 "@types/react-dom@npm:*, @types/react-dom@npm:>=16.9.0":
+=======
+"@types/react-dom@npm:*, @types/react-dom@npm:17.0.14, @types/react-dom@npm:>=16.9.0":
+>>>>>>> 365436a3 (refactor(styles): upgrade packages)
   version: 17.0.14
   resolution: "@types/react-dom@npm:17.0.14"
 >>>>>>> 881e6e85 (refactor(styles): upgrade packages)
   dependencies:
     "@types/react": "*"
   checksum: 6c183e2e50240b77ed767cd968fe061ef4f2b47f84da5ec9e412a767d68c9a004d1f6ccca4295a5aa2c3ee723377e59006a2031f3767c00d8ac9e240a51bb142
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:18.0.0":
-  version: 18.0.0
-  resolution: "@types/react-dom@npm:18.0.0"
-  dependencies:
-    "@types/react": "*"
-  checksum: 0d8c9cb3e72aefe0dd2b58a49845a200369f01ae92f3f11f642e04efc95dfd1c9380b6592d4273dd6113fb8707947d15b66d56c75c41f39f28bd897f0c08dfa9
   languageName: node
   linkType: hard
 
@@ -7095,11 +7090,15 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react@npm:*, @types/react@npm:18.0.5, @types/react@npm:>=16":
   version: 18.0.5
   resolution: "@types/react@npm:18.0.5"
 =======
 "@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:>=16.9.0":
+=======
+"@types/react@npm:*, @types/react@npm:17.0.43, @types/react@npm:>=16, @types/react@npm:>=16.9.0":
+>>>>>>> 365436a3 (refactor(styles): upgrade packages)
   version: 17.0.43
   resolution: "@types/react@npm:17.0.43"
 >>>>>>> 881e6e85 (refactor(styles): upgrade packages)
@@ -7108,17 +7107,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 70d3336d43ef25509fa89ef3278f57fdf1945fc921e69b7890a78ab9a52a55ee38e2f13aa71eb4f6032b7311e7557860ce8836c1acf3028304989571c9736a96
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.0.1":
-  version: 18.0.1
-  resolution: "@types/react@npm:18.0.1"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: ede927ed3766fef5fec513fe75e79180bb3c97d21ca7707321e969193c596bc4a531160238546a845e4131df02ec9be7803277a268bc270156362d16b29b4ffb
   languageName: node
   linkType: hard
 
@@ -25937,8 +25925,8 @@ __metadata:
     "@types/ioredis": 4.28.10
     "@types/jest": 27.4.1
     "@types/node": 17.0.23
-    "@types/react": 18.0.1
-    "@types/react-dom": 18.0.0
+    "@types/react": 17.0.43
+    "@types/react-dom": 17.0.14
     "@typescript-eslint/eslint-plugin": 5.18.0
     "@typescript-eslint/parser": 5.18.0
     apollo-server-core: 3.6.7
