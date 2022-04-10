@@ -5980,7 +5980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/node-logger@npm:6.4.21":
+"@storybook/node-logger@npm:6.4.21, @storybook/node-logger@npm:^6.1.14":
   version: 6.4.21
   resolution: "@storybook/node-logger@npm:6.4.21"
   dependencies:
@@ -5993,6 +5993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@storybook/node-logger@npm:^6.1.14":
   version: 6.4.20
   resolution: "@storybook/node-logger@npm:6.4.20"
@@ -6028,6 +6029,8 @@ __metadata:
     "@storybook/csf": 0.0.2--canary.87bc651.0
     "@storybook/store": 6.4.22
 =======
+=======
+>>>>>>> f0832913 (refactor(styles): upgrade packages)
 "@storybook/postinstall@npm:6.4.21":
   version: 6.4.21
   resolution: "@storybook/postinstall@npm:6.4.21"
