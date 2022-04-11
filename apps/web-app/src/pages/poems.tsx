@@ -1,22 +1,19 @@
 import { BadRequest } from '@tsed/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-<<<<<<< HEAD:apps/nextjs-app/src/pages/index.tsx
-import { demoConfig } from '@/features/demo/demo.config';
-import { DemoPage } from '@/features/demo/pages';
-=======
-import { demoConfig, DemoPage } from '@/features/demo';
->>>>>>> 1593ce10 (refactor(web-app): sections):apps/web-app/src/pages/poems.tsx
+import { demoConfig, DemoPage, getServerSideLayout } from '@/features/demo';
 
 type Props = {
   /** Add HomeRoute props here */
 };
 
-export default function DemoRoute(
-  _props: InferGetStaticPropsType<typeof getStaticProps>
-) {
+function DemoRoute(_props: InferGetStaticPropsType<typeof getStaticProps>) {
   return <DemoPage />;
 }
+
+DemoRoute.getServerSideLayout = getServerSideLayout;
+
+export default DemoRoute;
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { locale } = context;
