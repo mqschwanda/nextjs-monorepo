@@ -1,9 +1,10 @@
 import { Asserts } from '@mqs/core-lib';
-import { PrismaManager, PrismaClientDbMain } from '@mqs/db-main-prisma';
+import { PrismaClient } from '@prisma/client';
+import { PrismaManager } from './manager';
 
 const isDev = process.env?.NODE_ENV === 'development';
 
-export const getPrismaClientDbMain: () => PrismaClientDbMain = () => {
+export const getPrismaClient: () => PrismaClient = () => {
   const url = process.env?.PRISMA_DATABASE_URL ?? null;
   Asserts.nonEmptyString(
     url,
@@ -14,7 +15,7 @@ export const getPrismaClientDbMain: () => PrismaClientDbMain = () => {
   );
 
   return PrismaManager.getDevSafeInstance('db-main', () => {
-    const prismaClient = new PrismaClientDbMain({
+    const prismaClient = new PrismaClient({
       datasources: {
         db: {
           url: url,
