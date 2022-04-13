@@ -3157,6 +3157,7 @@ __metadata:
     "@mqs/core-lib": "workspace:^"
     "@mui/icons-material": 5.6.1
     "@mui/material": 5.6.1
+    "@mui/system": 5.6.1
     "@mui/utils": 5.6.1
     "@storybook/addon-actions": 6.4.21
     "@storybook/addon-docs": 6.4.21
@@ -3343,7 +3344,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^5.6.1":
+"@mui/system@npm:5.6.1, @mui/system@npm:^5.6.1":
   version: 5.6.1
   resolution: "@mui/system@npm:5.6.1"
   dependencies:

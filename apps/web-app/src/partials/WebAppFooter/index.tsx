@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Stack, Typography } from '@mqs/ui-lib';
 import { Link } from '@/components';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import type { PageType } from 'types.d/next-pages';
+import type { PageType } from '@/types.d/next-pages';
 
 export type WebAppFooterProps = {
   subpages?: Array<PageType>;

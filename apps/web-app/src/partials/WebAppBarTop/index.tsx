@@ -8,7 +8,7 @@ import {
 } from '@mqs/ui-lib';
 import type { MouseEventHandler } from 'react';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import type { PageType } from 'types.d/next-pages';
+import type { PageType } from '@/types.d/next-pages';
 import { WebAppBarTopTabs } from './partials';
 
 export type WebAppBarTopProps = {
