@@ -2,7 +2,7 @@ import { Tab, Tabs, useTheme } from '@mqs/ui-lib';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 import { Link } from '@/components';
-import type { PageType } from 'types.d/next-pages';
+import type { PageType } from '@/types.d/next-pages';
 
 export type WebAppBarTopTabsProps = {
   pages: Array<PageType>;
