@@ -1,4 +1,5 @@
-import { PrismaManager, PrismaClientDbMain } from '@mqs/db-main-prisma';
+import { PrismaManager } from '@mqs/db-main-prisma';
+import { PrismaClient } from '@prisma/client';
 import execa from 'execa';
 import type { Options as ExecaOptions } from 'execa';
 import { getAndCheckDatabaseDsn } from '../e2e-dsn-services.util';
@@ -34,7 +35,7 @@ describe('prisma cli commands', () => {
       expect(seedResult.stdout).toMatch(/seeding finished/i);
 
       const prisma = PrismaManager.getDevSafeInstance('test', () => {
-        return new PrismaClientDbMain({
+        return new PrismaClient({
           datasources: {
             db: {
               url: dsn,

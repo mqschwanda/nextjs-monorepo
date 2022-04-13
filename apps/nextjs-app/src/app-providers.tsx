@@ -1,35 +1,25 @@
+import { ApolloProvider } from '@apollo/client';
 import type { EmotionCache } from '@emotion/react';
 import { UIProvider } from '@mqs/ui-lib';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { createEmotionCache } from '@/lib/emotion';
+import apolloClient from '@/core/apollo/client';
+import { emotionCache as clientSideEmotionCache } from '@/core/emotion';
+import WebAppUiContextProvider from '@/hooks/useWebAppUiContext/provider';
 import { muiTheme } from '@/themes/mui/mui.theme';
-import WebAppUiContextProvider from './hooks/useWebAppUiContext/provider';
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-});
-
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache();
-
-type Props = {
+type AppProvidersProps = {
   emotionCache?: EmotionCache;
   children: ReactNode;
 };
 
-export const AppProviders: FC<Props> = (props) => {
-  const { emotionCache = clientSideEmotionCache } = props;
+export const AppProviders: FC<AppProvidersProps> = (props) => {
+  const { children, emotionCache = clientSideEmotionCache } = props;
   return (
     <UIProvider cache={emotionCache} theme={muiTheme}>
-      <QueryClientProvider client={queryClient}>
-        <WebAppUiContextProvider>{props.children}</WebAppUiContextProvider>
-      </QueryClientProvider>
+      <WebAppUiContextProvider>
+        <ApolloProvider client={apolloClient}>{children}</ApolloProvider>
+      </WebAppUiContextProvider>
     </UIProvider>
   );
 };
