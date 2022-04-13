@@ -13,7 +13,7 @@ import type { DrawerProps } from '@mqs/ui-lib';
 import { useRouter } from 'next/router';
 import { ListItemButton } from '@/components/ListItemButton';
 import useWebAppUiContext from '@/hooks/useWebAppUiContext';
-import type { PageType } from 'types.d/next-pages';
+import type { PageType } from '@/types.d/next-pages';
 
 export type WebAppNavigationDrawerProps = DrawerProps & {
   width?: string | number;

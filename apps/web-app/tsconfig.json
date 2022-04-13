@@ -9,6 +9,7 @@
     "jsxImportSource": "@emotion/react",
     "incremental": true,
     "paths": {
+      "@/types.d/*": ["./types.d/*"],
       "@/backend/*": ["./backend/*"],
       "@/components/*": ["./components/*"],
       "@/components": ["./components"],
