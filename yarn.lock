@@ -2306,11 +2306,15 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@emotion/babel-plugin@npm:11.9.2, @emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.7.1":
   version: 11.9.2
   resolution: "@emotion/babel-plugin@npm:11.9.2"
 =======
 "@emotion/babel-plugin@npm:11.9.2":
+=======
+"@emotion/babel-plugin@npm:11.9.2, @emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.7.1":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 11.9.2
   resolution: "@emotion/babel-plugin@npm:11.9.2"
   dependencies:
@@ -2332,6 +2336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.7.1":
   version: 11.7.2
   resolution: "@emotion/babel-plugin@npm:11.7.2"
@@ -2355,6 +2360,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@emotion/babel-preset-css-prop@npm:11.2.0":
   version: 11.2.0
   resolution: "@emotion/babel-preset-css-prop@npm:11.2.0"
@@ -3981,18 +3988,23 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@popperjs/core@npm:^2.11.5, @popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
   version: 2.11.5
   resolution: "@popperjs/core@npm:2.11.5"
   checksum: fd7f9dca3fb716d7426332b6ee283f88d2724c0ab342fb678865a640bad403dfb9eeebd8204a406986162f7e2b33394f104320008b74d0e9066d7322f70ea35d
 =======
 "@popperjs/core@npm:^2.11.5":
+=======
+"@popperjs/core@npm:^2.11.5, @popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 2.11.5
   resolution: "@popperjs/core@npm:2.11.5"
   checksum: fd7f9dca3fb716d7426332b6ee283f88d2724c0ab342fb678865a640bad403dfb9eeebd8204a406986162f7e2b33394f104320008b74d0e9066d7322f70ea35d
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
   version: 2.11.4
   resolution: "@popperjs/core@npm:2.11.4"
@@ -4001,6 +4013,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@prisma/client@npm:3.12.0":
   version: 3.12.0
   resolution: "@prisma/client@npm:3.12.0"
@@ -7089,18 +7103,23 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/prettier@npm:2.6.0, @types/prettier@npm:^2.1.5":
   version: 2.6.0
   resolution: "@types/prettier@npm:2.6.0"
   checksum: 946f1f82ce6f31664e023a5d65931c31b7d677b454f528f67dce851d72e7fcfe713076f4251b16c3646eecf1545f5f5b909b4962966341ed9ddf5b80113b3674
 =======
 "@types/prettier@npm:2.6.0":
+=======
+"@types/prettier@npm:2.6.0, @types/prettier@npm:^2.1.5":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 2.6.0
   resolution: "@types/prettier@npm:2.6.0"
   checksum: 946f1f82ce6f31664e023a5d65931c31b7d677b454f528f67dce851d72e7fcfe713076f4251b16c3646eecf1545f5f5b909b4962966341ed9ddf5b80113b3674
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@types/prettier@npm:^2.1.5":
   version: 2.4.4
   resolution: "@types/prettier@npm:2.4.4"
@@ -7109,6 +7128,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@types/pretty-hrtime@npm:^1.0.0":
   version: 1.0.1
   resolution: "@types/pretty-hrtime@npm:1.0.1"
@@ -7133,6 +7154,7 @@ __metadata:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react-dom@npm:18.0.1, @types/react-dom@npm:^18.0.0":
   version: 18.0.1
   resolution: "@types/react-dom@npm:18.0.1"
@@ -7144,6 +7166,9 @@ __metadata:
 =======
 "@types/react-dom@npm:17.0.14, @types/react-dom@npm:>=16.9.0":
 >>>>>>> 5d576680 (chore(npm): update deps)
+=======
+"@types/react-dom@npm:17.0.14":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 17.0.14
   resolution: "@types/react-dom@npm:17.0.14"
 >>>>>>> 881e6e85 (refactor(styles): upgrade packages)
@@ -7153,7 +7178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:>=16.9.0, @types/react-dom@npm:^18.0.0":
   version: 18.0.0
   resolution: "@types/react-dom@npm:18.0.0"
   dependencies:
@@ -7505,6 +7530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/scope-manager@npm:5.19.0":
   version: 5.19.0
   resolution: "@typescript-eslint/scope-manager@npm:5.19.0"
@@ -7517,6 +7543,18 @@ __metadata:
 
 <<<<<<< HEAD
 =======
+=======
+"@typescript-eslint/scope-manager@npm:5.12.1":
+  version: 5.12.1
+  resolution: "@typescript-eslint/scope-manager@npm:5.12.1"
+  dependencies:
+    "@typescript-eslint/types": 5.12.1
+    "@typescript-eslint/visitor-keys": 5.12.1
+  checksum: b6e7f45b4fe39397430149ad005f7d28aa75a063dacfc947514abd52ba5235fecf937784416dfb7e8c168025b1bc74611332ceb214045cc362922e4b311bcb11
+  languageName: node
+  linkType: hard
+
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@typescript-eslint/scope-manager@npm:5.19.0":
   version: 5.19.0
   resolution: "@typescript-eslint/scope-manager@npm:5.19.0"
@@ -7551,10 +7589,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/types@npm:5.19.0":
   version: 5.19.0
   resolution: "@typescript-eslint/types@npm:5.19.0"
   checksum: 383091f0063c789c07e8e8361f8a2b5c4619fc3672e9b1ac88c83ec3abd9ddeaea7c8adcc62aacfa8139ebff4c87c5871fb8f743a54208cc239c5a0c3bfbc280
+=======
+"@typescript-eslint/types@npm:5.12.1":
+  version: 5.12.1
+  resolution: "@typescript-eslint/types@npm:5.12.1"
+  checksum: 753cb4b0f266500298f07c0386d72e7d9570f26e2deb7017fd677d21bb8bca7f2ca01d3f4b43d86fbb7337a76f0c9da86657de96f107dba92632d726b4e7797e
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   languageName: node
   linkType: hard
 
@@ -7602,6 +7647,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/utils@npm:5.19.0, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0":
   version: 5.19.0
   resolution: "@typescript-eslint/utils@npm:5.19.0"
@@ -7610,6 +7656,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@typescript-eslint/typescript-estree@npm:5.19.0":
   version: 5.19.0
   resolution: "@typescript-eslint/typescript-estree@npm:5.19.0"
@@ -7644,7 +7692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.19.0":
+"@typescript-eslint/utils@npm:5.19.0, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0":
   version: 5.19.0
   resolution: "@typescript-eslint/utils@npm:5.19.0"
   dependencies:
@@ -7660,6 +7708,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0":
   version: 5.18.0
   resolution: "@typescript-eslint/utils@npm:5.18.0"
@@ -7677,6 +7726,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@typescript-eslint/visitor-keys@npm:5.10.1":
   version: 5.10.1
   resolution: "@typescript-eslint/visitor-keys@npm:5.10.1"
@@ -7697,6 +7748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@vercel/node-bridge@npm:2.2.0":
   version: 2.2.0
@@ -7765,6 +7817,8 @@ __metadata:
 =======
 >>>>>>> 0897338a (refactor(apps): remove vite app)
 =======
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "@typescript-eslint/visitor-keys@npm:5.19.0":
   version: 5.19.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.19.0"
@@ -15495,6 +15549,7 @@ __metadata:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "i18next@npm:21.6.16, i18next@npm:^21.6.14":
   version: 21.6.16
   resolution: "i18next@npm:21.6.16"
@@ -15502,6 +15557,9 @@ __metadata:
 "i18next@npm:21.6.14, i18next@npm:^21.6.14":
 =======
 "i18next@npm:21.6.16":
+=======
+"i18next@npm:21.6.16, i18next@npm:^21.6.14":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 21.6.16
   resolution: "i18next@npm:21.6.16"
   dependencies:
@@ -15510,6 +15568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "i18next@npm:^21.6.14":
 >>>>>>> 5d576680 (chore(npm): update deps)
   version: 21.6.14
@@ -15521,6 +15580,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "iconv-lite@npm:0.4.19":
   version: 0.4.19
   resolution: "iconv-lite@npm:0.4.19"
@@ -21808,6 +21869,7 @@ __metadata:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "react-i18next@npm:11.16.6, react-i18next@npm:^11.16.2":
   version: 11.16.6
   resolution: "react-i18next@npm:11.16.6"
@@ -21815,6 +21877,9 @@ __metadata:
 "react-i18next@npm:11.16.2, react-i18next@npm:^11.16.2":
 =======
 "react-i18next@npm:11.16.6":
+=======
+"react-i18next@npm:11.16.6, react-i18next@npm:^11.16.2":
+>>>>>>> 9c6bf890 (chore(npm): update deps)
   version: 11.16.6
   resolution: "react-i18next@npm:11.16.6"
   dependencies:
@@ -21833,6 +21898,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "react-i18next@npm:^11.16.2":
 >>>>>>> 5d576680 (chore(npm): update deps)
   version: 11.16.2
@@ -21854,6 +21920,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 9c6bf890 (chore(npm): update deps)
 "react-inspector@npm:^5.1.0":
   version: 5.1.1
   resolution: "react-inspector@npm:5.1.1"
