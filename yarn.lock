@@ -14969,6 +14969,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "graphql-config@npm:^4.3.0":
   version: 4.3.0
   resolution: "graphql-config@npm:4.3.0"
@@ -15039,6 +15040,9 @@ __metadata:
   checksum: 39f795abc48a79177e54f5ef47331424987ba7194361dcfe983fd17c10ef853102b41283b996ab763c4293ea4c1215ba1da36d571c2487f4ff54d2b67a1dc176
 =======
 "graphql-tag@npm:^2.12.3":
+=======
+"graphql-tag@npm:^2.11.0, graphql-tag@npm:^2.12.3":
+>>>>>>> a3dad589 (refactor(graphql): add graphql and remove rest)
   version: 2.12.6
   resolution: "graphql-tag@npm:2.12.6"
   dependencies:
