@@ -9,7 +9,7 @@ import type {
 import type { DocumentContext, DocumentProps } from 'next/document';
 import Document, { Html, Main, Head, NextScript } from 'next/document';
 import { Children as ReactChildren } from 'react';
-import { createEmotionCache } from '@/core/emotion/create-emotion-cache';
+import { emotionCache } from '@/core/emotion';
 
 type Props = DocumentProps;
 
@@ -25,13 +25,12 @@ class MyDocument extends Document<Props> {
 
     // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
     // However, be aware that it can have global side effects.
-    const cache = createEmotionCache();
-    const { extractCriticalToChunks } = createEmotionServer(cache);
+    const { extractCriticalToChunks } = createEmotionServer(emotionCache);
 
     ctx.renderPage = () =>
       originalRenderPage({
         enhanceApp: (App: EnhancedApp) => (props) =>
-          <App emotionCache={cache} {...props} />,
+          <App emotionCache={emotionCache} {...props} />,
       });
 
     const initialProps = await Document.getInitialProps(ctx);

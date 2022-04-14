@@ -1,13 +1,13 @@
 import type { UnPromisify } from '@mqs/core-lib';
-import type { PrismaClientDbMain } from '@mqs/db-main-prisma';
+import type { PrismaClient } from '@prisma/client';
 import { InternalServerError } from '@tsed/exceptions';
 
 export type GetPoems = UnPromisify<
-  ReturnType<typeof PoemRepositorySsr['prototype']['getPoems']>
+  ReturnType<typeof PoemSSR['prototype']['getPoems']>
 >;
 
-export class PoemRepositorySsr {
-  constructor(private prisma: PrismaClientDbMain) {}
+export class PoemSSR {
+  constructor(private prisma: PrismaClient) {}
 
   /**
    * @throws Error

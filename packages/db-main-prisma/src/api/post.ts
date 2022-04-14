@@ -1,14 +1,14 @@
 import type { UnPromisify } from '@mqs/core-lib';
 import { Asserts } from '@mqs/core-lib';
-import type { PrismaClientDbMain } from '@mqs/db-main-prisma';
+import type { PrismaClient } from '@prisma/client';
 import { InternalServerError, NotFound } from '@tsed/exceptions';
 
 export type GetPosts = UnPromisify<
-  ReturnType<typeof PostRepositorySsr['prototype']['getPosts']>
+  ReturnType<typeof PostSSR['prototype']['getPosts']>
 >;
 
-export class PostRepositorySsr {
-  constructor(private prisma: PrismaClientDbMain) {}
+export class PostSSR {
+  constructor(private prisma: PrismaClient) {}
 
   /**
    * @throws Error
