@@ -24,26 +24,26 @@ export class PrismaManager {
    * @see {@link https://pris.ly/d/help/next-js-best-practices|Prisma NextJs Best Practices}
    */
   static getDevSafeInstance(
-    instanceKey: string,
-    prismaClientFactory: () => PrismaClient
+    key: string,
+    factory: () => PrismaClient
   ): PrismaClient {
     if (process.env.NODE_ENV === 'production') {
-      if (!PrismaManager.instances?.[instanceKey]) {
+      if (!PrismaManager.instances?.[key]) {
         PrismaManager.instances ??= {};
-        PrismaManager.instances[instanceKey] = prismaClientFactory();
+        PrismaManager.instances[key] = factory();
       }
-      return PrismaManager.instances[instanceKey];
+      return PrismaManager.instances[key];
     } else {
       // PrismaClient is attached to the `global` object in development to prevent
       // exhausting your database connection limit.
-      if (!global.__PRISMA_INSTANCES__?.[instanceKey]) {
+      if (!global.__PRISMA_INSTANCES__?.[key]) {
         global.__PRISMA_INSTANCES__ ??= {};
-        global.__PRISMA_INSTANCES__[instanceKey] = prismaClientFactory();
+        global.__PRISMA_INSTANCES__[key] = factory();
         console.debug(
-          '[PrismaFactory.createDevSafeInstance]: Dev instance created and preserved globally.'
+          `[PrismaManager global.__PRISMA_INSTANCES__[${key}]]: Dev instance created and preserved globally.`
         );
       }
-      return global.__PRISMA_INSTANCES__[instanceKey];
+      return global.__PRISMA_INSTANCES__[key];
     }
   }
 }
