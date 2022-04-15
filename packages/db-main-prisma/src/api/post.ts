@@ -1,61 +1,39 @@
 import type { UnPromisify } from '@mqs/core-lib';
-import { Asserts } from '@mqs/core-lib';
-import type { PrismaClient } from '@prisma/client';
-import { InternalServerError, NotFound } from '@tsed/exceptions';
+import { PrismaModel } from './_base';
 
-export type GetPosts = UnPromisify<
-  ReturnType<typeof PostSSR['prototype']['getPosts']>
->;
+export type ReturnPost<Method extends keyof typeof PostModel['prototype']> =
+  UnPromisify<ReturnType<typeof PostModel['prototype'][Method]>>;
 
-export class PostSSR {
-  constructor(private prisma: PrismaClient) {}
+export type GetPosts = ReturnPost<'getPosts'>;
 
+export class PostModel extends PrismaModel {
   /**
-   * @throws Error
+   *
    */
-  getPost = async (postId: number) => {
-    try {
-      const post = this.prisma.post.findUnique({
-        where: { id: postId },
-        include: { author: true },
-      });
-      Asserts.isPresent(
-        post,
-        () => new NotFound(`Post ${postId} can't be found`)
-      );
-      return post;
-    } catch (e) {
-      throw new InternalServerError(`Post ${postId} can't be retrieved`, e);
-    }
+  getPost = async (id: number) => {
+    return await this.prisma.post.findUnique({
+      where: { id },
+      include: { author: true },
+    });
   };
 
   /**
-   * @throws Error
+   *
    */
   getPosts = async (options?: { limit?: number; offset?: number }) => {
     const { limit, offset } = options ?? {};
-    try {
-      return await this.prisma.post.findMany({
-        skip: offset,
-        take: limit,
-        where: {
-          publishedAt: {
-            not: null,
-          },
+    return await this.prisma.post.findMany({
+      skip: offset,
+      take: limit,
+      where: {
+        content: {
+          not: undefined,
         },
-        include: {
-          author: {
-            select: {
-              firstName: true,
-              lastName: true,
-              nickname: true,
-            },
-          },
-        },
-        orderBy: { publishedAt: 'desc' },
-      });
-    } catch (e) {
-      throw new InternalServerError(`Posts can't be retrieved`, e);
-    }
+      },
+      include: {
+        author: true,
+      },
+      orderBy: { publishedAt: 'desc' },
+    });
   };
 }

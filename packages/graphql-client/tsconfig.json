@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ES2020",
+    "lib": ["esnext"],
+    "module": "ES2020",
+    "noEmit": false,
+    "incremental": true,
+    "paths": {
+      "@mqs/core-lib": ["../../../packages/core-lib/src/index"],
+      "@mqs/core-lib/*": ["../../../packages/core-lib/src/*"]
+    }
+  },
+  "exclude": ["**/node_modules", "**/.*/"]
+}

@@ -1,4 +1,4 @@
-import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+import { ApolloClient, HttpLink, InMemoryCache } from '@mqs/graphql-client';
 import fetch from 'cross-fetch';
 
 export default new ApolloClient({
