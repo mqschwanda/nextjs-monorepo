@@ -1,4 +1,4 @@
-import { BadRequest } from '@tsed/exceptions';
+import { BadRequest } from '@mqs/core-lib/src/utils/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { demoConfig, DemoPage, getServerSideLayout } from '@/features/Demo';

@@ -2,11 +2,8 @@ import {
   ApolloServerPluginLandingPageLocalDefault,
   ApolloServerPluginLandingPageProductionDefault,
 } from 'apollo-server-core';
-import { ApolloServer } from 'apollo-server-micro';
-import { context } from './context';
-import { typeDefs, resolvers } from './schema';
 
-const plugins = [
+export const plugins = [
   process.env.NODE_ENV === 'production'
     ? ApolloServerPluginLandingPageProductionDefault({
         // graphRef: 'graphql-sdl@nextjs-monorepo-example',
@@ -14,10 +11,3 @@ const plugins = [
       })
     : ApolloServerPluginLandingPageLocalDefault({ footer: false }),
 ];
-
-export const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context,
-  plugins,
-});

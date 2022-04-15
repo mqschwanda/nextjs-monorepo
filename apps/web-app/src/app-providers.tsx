@@ -1,5 +1,5 @@
-import { ApolloProvider } from '@apollo/client';
 import type { EmotionCache } from '@emotion/react';
+import { ApolloProvider } from '@mqs/graphql-client';
 import { UIProvider } from '@mqs/ui-lib';
 import type { FC, ReactNode } from 'react';
 
