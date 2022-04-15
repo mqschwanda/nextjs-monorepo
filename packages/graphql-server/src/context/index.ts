@@ -1,6 +1,5 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaManager, PrismaClient } from '@mqs/db-main-prisma';
 import packageJSON from '../../package.json';
-import { PrismaManager } from '../prisma';
 
 const isDevelopment = process.env?.NODE_ENV === 'development';
 
@@ -8,8 +7,9 @@ export type GraphqlContext = {
   prisma: PrismaClient;
 };
 
-export const context: GraphqlContext = {
-  prisma: PrismaManager.getDevSafeInstance(packageJSON.name, () => {
+const prisma = PrismaManager.getDevSafeInstance(
+  packageJSON.name,
+  function getPrismaClient() {
     const client = new PrismaClient({
       datasources: {
         db: {
@@ -45,5 +45,9 @@ export const context: GraphqlContext = {
     }
 
     return client;
-  }),
+  }
+);
+
+export const context: GraphqlContext = {
+  prisma,
 };

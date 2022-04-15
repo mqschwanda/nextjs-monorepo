@@ -1,4 +1,4 @@
-import { server } from '@mqs/db-main-prisma/src/graphql/server';
+import { server } from '@mqs/graphql-server';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const start = server.start();

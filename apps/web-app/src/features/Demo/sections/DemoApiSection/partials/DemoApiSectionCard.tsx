@@ -1,4 +1,4 @@
-import type { Poem } from '@mqs/db-main-prisma';
+import type { PostQueryData } from '@mqs/graphql-client';
 import {
   Card,
   CardActions,
@@ -11,24 +11,24 @@ import {
 } from '@mqs/ui-lib';
 import type { FC } from 'react';
 
+type Post = PostQueryData['posts'][0];
+
 type DemoApiSectionCardProps = {
-  poem: Poem;
+  post: Post;
 };
 
-export const DemoApiSectionCard: FC<DemoApiSectionCardProps> = ({ poem }) => {
-  const { keywords, author, title, content }: Poem = poem;
-  const keywordURI = (keywords ?? [])
-    .map((keyword) => encodeURIComponent(keyword))
-    .join(',');
-  const image = `https://source.unsplash.com/random/640x480?${keywordURI}`;
+export const DemoApiSectionCard: FC<DemoApiSectionCardProps> = ({ post }) => {
+  const { keywords, title, content, image, author }: Post = post;
 
   return (
     <Card>
       <CardHeader
         title={title ?? <Skeleton />}
-        subheader={author ? `By ${author}` : <Skeleton />}
+        subheader={
+          author ? `By ${author.firstName} ${author.lastName}` : <Skeleton />
+        }
       />
-      {keywords ? (
+      {image ? (
         <CardMedia component="img" src={image} alt={title} />
       ) : (
         <Skeleton height="300px" width="100%" />

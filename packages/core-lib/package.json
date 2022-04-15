@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@tsed/exceptions": "^6.112.0",
-    "dequal": "^2.0.2"
+    "dequal": "^2.0.2",
+    "lorem-ipsum": "2.0.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",

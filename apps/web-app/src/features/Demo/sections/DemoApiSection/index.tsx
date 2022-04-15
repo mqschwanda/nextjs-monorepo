@@ -1,16 +1,23 @@
-import type { Poem } from '@mqs/db-main-prisma';
+import type { PostQueryData } from '@mqs/graphql-client';
+import { usePostsQuery } from '@mqs/graphql-client';
 import { Alert, Button, CircularProgress, Grid } from '@mqs/ui-lib';
 import type { FC } from 'react';
 import { useMemo } from 'react';
-import { usePoemsQuery } from '../../hooks';
 import { DemoApiSectionCard } from './partials/DemoApiSectionCard';
+
+type Post = PostQueryData['posts'][0];
 
 type NoChildrenProps = {
   children?: never;
 };
 
 export const DemoApiSection: FC<NoChildrenProps> = () => {
-  const { loading, data, error, refetch } = usePoemsQuery();
+  const { loading, data, error, refetch } = usePostsQuery({
+    variables: {
+      limit: 10,
+      offset: 0,
+    },
+  });
 
   const content = useMemo(() => {
     if (error) {
@@ -29,15 +36,15 @@ export const DemoApiSection: FC<NoChildrenProps> = () => {
       );
     }
 
-    if (loading || !data?.poems) {
+    if (loading || !data?.posts) {
       return <CircularProgress />;
     }
 
     return (
       <Grid container spacing={1}>
-        {data.poems.map((poem: Poem) => (
-          <Grid item xs={12} md={6} lg={4} key={poem.id}>
-            <DemoApiSectionCard poem={poem} />
+        {data.posts.map((post: Post) => (
+          <Grid item xs={12} md={6} lg={4} key={post.id}>
+            <DemoApiSectionCard post={post} />
           </Grid>
         ))}
       </Grid>
