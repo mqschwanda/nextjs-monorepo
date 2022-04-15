@@ -81,6 +81,7 @@
     "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
     "@mqs/eslint-plugin": "workspace:^",
+    "@mqs/lint-staged": "workspace:^",
     "@types/prettier": "2.6.0",
     "@types/shell-quote": "1.7.1",
     "@mqs/eslint-config-bases": "workspace:^",
