@@ -5,9 +5,5 @@
 
 module.exports = {
   root: true,
-  extends: [
-    'plugin:@mqs/eslint-plugin/base',
-    'plugin:@mqs/eslint-plugin/react',
-    'plugin:@mqs/eslint-plugin/next',
-  ],
+  extends: ['./src/configs/base.js'],
 };
