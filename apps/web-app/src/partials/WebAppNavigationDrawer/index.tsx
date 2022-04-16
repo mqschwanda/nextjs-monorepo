@@ -11,17 +11,21 @@ import {
 } from '@mqs/ui-lib';
 import type { DrawerProps } from '@mqs/ui-lib';
 import { useRouter } from 'next/router';
+import { memo } from 'react';
 import { ListItemButton } from '@/components/ListItemButton';
 import useWebAppUiContext from '@/hooks/useWebAppUiContext';
 import type { PageType } from '@/types.d/next-pages';
+import type { WithTestId } from '@/types.d/react';
 
-export type WebAppNavigationDrawerProps = DrawerProps & {
-  width?: string | number;
-  pages?: Array<PageType>;
-  subpages?: Array<PageType>;
-};
+export type WebAppNavigationDrawerProps = WithTestId<
+  DrawerProps & {
+    width?: string | number;
+    pages?: Array<PageType>;
+    subpages?: Array<PageType>;
+  }
+>;
 
-export default function WebAppNavigationDrawer({
+function WebAppNavigationDrawer({
   PaperProps,
   anchor = 'left',
   onClose,
@@ -29,6 +33,7 @@ export default function WebAppNavigationDrawer({
   pages,
   subpages,
   width,
+  testId,
   ...props
 }: WebAppNavigationDrawerProps) {
   const router = useRouter();
@@ -40,6 +45,7 @@ export default function WebAppNavigationDrawer({
       anchor={anchor}
       onClose={onClose}
       open={open}
+      data-testid={testId}
       {...props}
     >
       <Toolbar sx={{ justifyContent: 'end' }}>
@@ -80,3 +86,5 @@ export default function WebAppNavigationDrawer({
     </Drawer>
   );
 }
+
+export default memo(WebAppNavigationDrawer);
