@@ -4,7 +4,7 @@ import type { AppProps as NextAppProps } from 'next/app';
 import Head from 'next/head';
 import type { ReactElement, ReactNode } from 'react';
 import { useMemo } from 'react';
-import { AppProviders } from '../app-providers';
+import Providers from '../providers';
 
 const fallbackServerSideLayout = (page: ReactElement) => page;
 
@@ -43,13 +43,13 @@ const MyApp = (appProps: AppProps) => {
   );
 
   return (
-    <AppProviders emotionCache={emotionCache}>
+    <Providers emotionCache={emotionCache}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       {content}
-    </AppProviders>
+    </Providers>
   );
 };
 

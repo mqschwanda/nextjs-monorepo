@@ -1,11 +1,11 @@
 import type { FC } from 'react';
-import { AppProviders } from '../../src/app-providers';
+import Providers from '../../src/providers';
 import { I18nextTestStubProvider } from './i18next-stub.config';
 
 export const AppTestProviders: FC = ({ children }) => {
   return (
-    <AppProviders>
+    <Providers>
       <I18nextTestStubProvider>{children}</I18nextTestStubProvider>
-    </AppProviders>
+    </Providers>
   );
 };
