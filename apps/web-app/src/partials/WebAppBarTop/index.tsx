@@ -6,24 +6,27 @@ import {
   MoreVertIcon,
   Typography,
 } from '@mqs/ui-lib';
+import { memo } from 'react';
 import type { MouseEventHandler } from 'react';
-import useAppTranslation from '@/hooks/useAppTranslation';
+import { useTranslation } from 'react-i18next';
 import type { PageType } from '@/types.d/next-pages';
+import type { WithTestId } from '@/types.d/react';
 import { WebAppBarTopTabs } from './partials';
 
-export type WebAppBarTopProps = {
+export type WebAppBarTopProps = WithTestId<{
   pages?: Array<PageType>;
   onClickNavigationIcon?: MouseEventHandler<HTMLButtonElement>;
-};
+}>;
 
-export default function WebAppBarTop({
+function WebAppBarTop({
   pages,
   onClickNavigationIcon,
+  testId,
 }: WebAppBarTopProps) {
-  const { t } = useAppTranslation();
+  const { t } = useTranslation(['common', 'system']);
 
   return (
-    <AppBarTop position="sticky">
+    <AppBarTop position="sticky" data-testid={testId}>
       <IconButton
         color="inherit"
         onClick={onClickNavigationIcon}
@@ -44,3 +47,5 @@ export default function WebAppBarTop({
     </AppBarTop>
   );
 }
+
+export default memo(WebAppBarTop);

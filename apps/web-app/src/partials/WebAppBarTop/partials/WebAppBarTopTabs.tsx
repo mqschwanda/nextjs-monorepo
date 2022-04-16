@@ -1,14 +1,15 @@
 import { Tab, Tabs, useTheme } from '@mqs/ui-lib';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { Link } from '@/components';
 import type { PageType } from '@/types.d/next-pages';
+import type { WithTestId } from '@/types.d/react';
 
-export type WebAppBarTopTabsProps = {
+export type WebAppBarTopTabsProps = WithTestId<{
   pages: Array<PageType>;
-};
+}>;
 
-export default function WebAppBarTopTabs({ pages }: WebAppBarTopTabsProps) {
+function WebAppBarTopTabs({ pages, testId }: WebAppBarTopTabsProps) {
   const router = useRouter();
   const theme = useTheme();
   const value = useMemo(() => {
@@ -30,6 +31,7 @@ export default function WebAppBarTopTabs({ pages }: WebAppBarTopTabsProps) {
       selectionFollowsFocus={false}
       textColor="inherit"
       value={value}
+      data-testid={testId}
     >
       {pages.map(({ label, href, icon }) => (
         <Tab
@@ -47,3 +49,5 @@ export default function WebAppBarTopTabs({ pages }: WebAppBarTopTabsProps) {
     </Tabs>
   );
 }
+
+export default memo(WebAppBarTopTabs);

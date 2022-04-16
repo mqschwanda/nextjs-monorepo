@@ -1,19 +1,22 @@
 import { Box, Container, Divider, Stack, Typography } from '@mqs/ui-lib';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from '@/components';
-import useAppTranslation from '@/hooks/useAppTranslation';
 import type { PageType } from '@/types.d/next-pages';
+import type { WithTestId } from '@/types.d/react';
 
-export type WebAppFooterProps = {
+export type WebAppFooterProps = WithTestId<{
   subpages?: Array<PageType>;
-};
+}>;
 
-export default function WebAppFooter({ subpages }: WebAppFooterProps) {
-  const { t } = useAppTranslation();
+function WebAppFooter({ subpages, testId }: WebAppFooterProps) {
+  const { t } = useTranslation(['common', 'system']);
 
   return (
     <Box
       component="footer"
       sx={{ marginTop: 'auto', paddingY: 6, backgroundColor: 'primary.main' }}
+      data-testid={testId}
     >
       <Container>
         <Stack spacing={1}>
@@ -49,3 +52,5 @@ export default function WebAppFooter({ subpages }: WebAppFooterProps) {
     </Box>
   );
 }
+
+export default memo(WebAppFooter);
