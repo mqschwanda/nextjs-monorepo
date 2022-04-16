@@ -1,2 +1,3 @@
-export { NotFoundPage } from './NotFoundPage';
-export { ErrorPage } from './ErrorPage';
+export * from './NotFoundPage';
+export * from './ErrorPage';
+export * from './getServerSideLayout';

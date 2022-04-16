@@ -1,2 +1,2 @@
-export * from '@/features/Error/config';
-export * from '@/features/Error/page';
+export * from '@/features/system/config';
+export * from '@/features/system/pages';

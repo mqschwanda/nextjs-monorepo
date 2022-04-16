@@ -1,7 +1,7 @@
 import { BadRequest } from '@mqs/core-lib/src/utils/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { getServerSideLayout, homeConfig, HomePage } from '@/features/Home';
+import { getServerSideLayout, homeConfig, HomePage } from '@/features/home';
 
 type Props = {
   /** Add HomeRoute props here */

@@ -1,11 +1,18 @@
 import { NotFoundPage } from '@/features/system/pages';
-import { render, screen } from '@/test-utils';
+import { mockUseRouter, render, screen } from '@/test-utils';
 
-describe('NotFoundPage test', () => {
-  it('should contains children', async () => {
-    render(<NotFoundPage title={'404 - Not found'} />);
-    expect(screen.getByTestId('not-found-title')).toHaveTextContent(
-      '404 - Not found'
-    );
+describe('<NotFoundPage />', () => {
+  beforeEach(() => {
+    mockUseRouter();
+  });
+
+  it('should render', async () => {
+    render(<NotFoundPage testId="NotFoundPage" />);
+    const notFoundPage = screen.getByTestId('NotFoundPage');
+    expect(notFoundPage).toBeInTheDocument();
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
   });
 });

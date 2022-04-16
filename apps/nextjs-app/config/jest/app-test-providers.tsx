@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import Providers from '../../src/providers';
 import { I18nextTestStubProvider } from './i18next-stub.config';
 

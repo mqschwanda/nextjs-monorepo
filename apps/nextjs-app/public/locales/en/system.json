@@ -1,6 +1,8 @@
 {
   "notFound": {
-    "title": "404 - Page Not Found"
+    "body": "The requested URL `{{pathname}}` was not found on this server. That’s all we know.",
+    "title": "404",
+    "subtitle": "Page Not Found"
   },
   "links": {
     "backToHome": "Back to home"

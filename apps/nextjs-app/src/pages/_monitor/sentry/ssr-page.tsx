@@ -1,5 +1,5 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { ErrorPage } from '@/features/Error';
+import { ErrorPage } from '@/features/system';
 
 type Props = {
   hasRunOnServer: boolean;

@@ -35,13 +35,17 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@mqs/core-lib": "workspace:^"
+    "@mqs/core-lib": "workspace:^",
+    "@mui/icons-material": "5.6.1",
+    "@mui/material": "5.6.1",
+    "@mui/system": "5.6.1",
+    "@mui/utils": "5.6.1",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "peerDependencies": {
     "@types/react": "^17.0.44 || ^18.0.0",
-    "@types/react-dom": "^17.0.44 || ^18.0.0",
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "@types/react-dom": "^17.0.44 || ^18.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -55,7 +59,7 @@
     "@babel/core": "7.17.9",
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@mdx-js/react": "2.1.1",
-    "@mqs/eslint-plugin": "workspace:^",
+    "@mqs/eslint-config-bases": "workspace:^",
     "@mqs/lint-staged": "workspace:^",
     "@storybook/addon-actions": "6.4.21",
     "@storybook/addon-docs": "6.4.21",
@@ -71,7 +75,6 @@
     "@types/node": "17.0.24",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
-    "@mqs/eslint-config-bases": "workspace:^",
     "autoprefixer": "10.4.4",
     "babel-loader": "8.2.4",
     "babel-plugin-macros": "3.1.0",

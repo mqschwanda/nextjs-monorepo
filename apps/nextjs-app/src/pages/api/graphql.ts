@@ -1,33 +1,13 @@
-import {
-  ApolloServerPluginLandingPageLocalDefault,
-  ApolloServerPluginLandingPageProductionDefault,
-} from 'apollo-server-core';
-import { ApolloServer } from 'apollo-server-micro';
+import { server } from '@mqs/graphql-server';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { graphqlSdlContext } from '@/backend/api/graphql-sdl/graphql-sdl-context';
-import { graphqlSdlSchema } from '@/backend/api/graphql-sdl/graphql-sdl-schema';
 
-const apolloServer = new ApolloServer({
-  typeDefs: graphqlSdlSchema.typeDefs,
-  resolvers: graphqlSdlSchema.resolvers,
-  context: graphqlSdlContext,
-  plugins: [
-    process.env.NODE_ENV === 'production'
-      ? ApolloServerPluginLandingPageProductionDefault({
-          // graphRef: 'graphql-sdl@nextjs-monorepo-example',
-          footer: false,
-        })
-      : ApolloServerPluginLandingPageLocalDefault({ footer: false }),
-  ],
-});
+const start = server.start();
 
 export const config = {
   api: {
     bodyParser: false,
   },
 };
-
-const startServer = apolloServer.start();
 
 export default async function handleGraphQl(
   req: NextApiRequest,
@@ -47,8 +27,8 @@ export default async function handleGraphQl(
     return false;
   }
 
-  await startServer;
-  await apolloServer.createHandler({
-    path: '/api/graphql-sdl',
+  await start;
+  await server.createHandler({
+    path: '/api/graphql',
   })(req, res);
 }

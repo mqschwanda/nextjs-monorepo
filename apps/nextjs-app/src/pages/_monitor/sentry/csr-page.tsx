@@ -1,6 +1,6 @@
 import { usePromise } from '@mqs/core-lib/hooks';
 import type { FC } from 'react';
-import { ErrorPage } from '@/features/Error';
+import { ErrorPage } from '@/features/system';
 
 const fetchAndAlwaysThrow = async () => {
   throw new Error(

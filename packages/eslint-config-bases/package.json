@@ -57,6 +57,7 @@
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
     "lint": "eslint  --ext .ts,.js",
     "typecheck": "tsc --project tsconfig.json --noEmit",
+    "depcheck": "depcheck . --specials=eslint,jest,lint-staged,prettier,babel,bin,webpack",
     "fix-all-files": "eslint  --ext .ts,.tsx,.js,.jsx --fix"
   },
   "dependencies": {
@@ -108,6 +109,7 @@
     }
   },
   "devDependencies": {
+    "@mqs/lint-staged": "workspace:^",
     "@types/prettier": "2.6.0",
     "eslint": "8.13.0",
     "graphql": "16.3.0",
