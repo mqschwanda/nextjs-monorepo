@@ -57,14 +57,14 @@ Useful to
 
 #### Example apps
 
-- [apps/nextjs-app](./apps/web-app): SSR, i18n, tailwind v3, emotion, graphQL, rest... [README](./apps/nextjs-app/README.md) | [DEMO/Vercel](https://monorepo-nextjs-app.vercel.app) | [CHANGELOG](./apps/nextjs-app/CHANGELOG.md)
+- [apps/nextjs-app](./apps/nextjs-app): SSR, i18n, tailwind v3, emotion, graphQL, rest... [README](./apps/nextjs-app/README.md) | [DEMO/Vercel](https://monorepo-nextjs-app.vercel.app) | [CHANGELOG](./apps/nextjs-app/CHANGELOG.md)
 
 > Apps should not depend on apps, they can depend on packages
 
 #### Example shared packages
 
 - [packages/core-lib](./packages/core-lib): publishable. [README](./packages/core-lib/README.md) | [CHANGELOG](./packages/core-lib/CHANGELOG.md)
-- [packages/db-main-prisma](./packages/db-main-prisma): used by web-app. [README](./packages/db-main-prisma/README.md) | [CHANGELOG](./packages/db-main-prisma/CHANGELOG.md)
+- [packages/db-main-prisma](./packages/db-main-prisma): used by nextjs-app. [README](./packages/db-main-prisma/README.md) | [CHANGELOG](./packages/db-main-prisma/CHANGELOG.md)
 - [packages/eslint-config-bases](./packages/eslint-config-bases): [README](./packages/eslint-config-bases/README.md) | [CHANGELOG](./packages/eslint-config-bases/CHANGELOG.md)
 - [packages/ui-lib](./packages/ui-lib): publishable. [README](./packages/ui-lib/README.md) | [CHANGELOG](./packages/ui-lib/CHANGELOG.md)
 

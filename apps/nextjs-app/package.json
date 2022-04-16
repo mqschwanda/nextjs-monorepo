@@ -3,15 +3,15 @@
   "version": "3.44.2",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/nextjs-monorepo-example",
+  "homepage": "https://github.com/mqschwanda/nextjs-monorepo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/nextjs-monorepo-example",
+    "url": "https://github.com/mqschwanda/nextjs-monorepo",
     "directory": "apps/nextjs-app"
   },
   "author": {
-    "name": "Vanvelthem Sébastien",
-    "url": "https://github.com/belgattitude"
+    "name": "Mark Q Schwanda",
+    "url": "https://github.com/mqschwanda"
   },
   "browserslist": {
     "production": [
