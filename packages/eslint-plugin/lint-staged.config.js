@@ -7,10 +7,7 @@
  * {@link https://github.com/mqschwanda/nextjs-monorepo/blob/main/docs/about-lint-staged.md}
  */
 
-const {
-  concatFilesForPrettier,
-  getEslintFixCmd,
-} = require('../../lint-staged.common.js');
+const { concatFilesForPrettier, getEslintFixCmd } = require('@mqs/lint-staged');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}

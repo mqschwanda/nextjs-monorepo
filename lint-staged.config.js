@@ -6,10 +6,10 @@
  * where we are able to add customization depending on the nature of the project (eslint...).
  *
  * {@link https://github.com/okonet/lint-staged#how-to-use-lint-staged-in-a-multi-package-monorepo}
- * {@link https://github.com/mqschwanda/nextjs-monorepo/blob/main/docs/about-lint-staged.md}
+ * {@link https://github.com/mqschwanda/nextjs-monorepo/blob/main/packages/lint-staged/README.md}
  */
 
-const { concatFilesForPrettier } = require('./lint-staged.common.js');
+const { concatFilesForPrettier } = require('@mqs/lint-staged');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}

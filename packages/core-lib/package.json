@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@mqs/eslint-plugin": "workspace:^",
+    "@mqs/lint-staged": "workspace:^",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.0.1",
     "@testing-library/react-hooks": "7.0.2",

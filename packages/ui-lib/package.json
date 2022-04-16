@@ -44,6 +44,7 @@
     "@emotion/styled": "11.8.1",
     "@mdx-js/react": "2.1.1",
     "@mqs/eslint-plugin": "workspace:^",
+    "@mqs/lint-staged": "workspace:^",
     "@storybook/addon-actions": "6.4.21",
     "@storybook/addon-docs": "6.4.21",
     "@storybook/addon-essentials": "6.4.21",

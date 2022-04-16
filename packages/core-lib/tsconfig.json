@@ -9,7 +9,9 @@
     "noEmit": false,
     "composite": false,
     "incremental": true,
-    "paths": {}
+    "paths": {
+      "@mqs/lint-staged": ["../../../packages/lint-staged/src/index"]
+    }
   },
   "exclude": ["**/node_modules", "**/.*/", "dist"]
 }
