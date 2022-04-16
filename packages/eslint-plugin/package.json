@@ -17,6 +17,7 @@
   "main": "./src/index.js",
   "scripts": {
     "clean": "rimraf --no-glob ./tsconfig.tsbuildinfo ./.eslintcache",
+    "depcheck": "depcheck .",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "test": "run-s test:unit",
