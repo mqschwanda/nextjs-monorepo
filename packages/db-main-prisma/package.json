@@ -19,6 +19,7 @@
     "seed": "ts-node prisma/seed"
   },
   "scripts": {
+    "depcheck": "depcheck . --specials=eslint,jest,lint-staged,prettier,babel,bin,webpack",
     "prisma-migrate": "dotenv-flow -- yarn prisma migrate",
     "prisma-migrate-reset": "dotenv-flow -- yarn prisma migrate reset",
     "prisma-db-seed": "dotenv-flow -- yarn prisma db seed",
@@ -50,7 +51,6 @@
     "is-port-reachable": "3.1.0",
     "jest": "27.5.1",
     "keyword-extractor": "0.0.21",
-    "npm-run-all": "4.1.5",
     "picocolors": "1.0.0",
     "prettier": "2.6.2",
     "prisma": "3.12.0",
