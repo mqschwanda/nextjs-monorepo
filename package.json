@@ -36,7 +36,7 @@
     "g:test-e2e": "yarn workspaces foreach -tv run test-e2e",
     "g:lint": "yarn workspaces foreach -ptv run lint --color",
     "g:lint-styles": "yarn workspaces foreach -ptv run lint-styles --color",
-    "g:typecheck": "yarn workspaces foreach -ptv run typecheck",
+    "g:typecheck": "yarn workspaces foreach -pv run typecheck",
     "g:lint-staged-files": "lint-staged --allow-empty",
     "g:fix-all-files": "yarn workspaces foreach -ptv run fix-all-files",
     "g:changeset": "changeset",

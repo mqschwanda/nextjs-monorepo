@@ -16,7 +16,7 @@
   "sideEffects": false,
   "main": "./src/index.ts",
   "prisma": {
-    "seed": "ts-node prisma/seed"
+    "seed": "esno prisma/seed"
   },
   "scripts": {
     "depcheck": "depcheck . --specials=eslint,jest,lint-staged,prettier,babel,bin,webpack",

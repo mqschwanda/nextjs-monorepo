@@ -8,7 +8,6 @@ export const PostsQuery = gql`
       id
       title
       content
-      keywords
       image
       slug
       author {

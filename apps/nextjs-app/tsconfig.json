@@ -27,7 +27,8 @@
       "@mqs/ui-lib": ["../../../packages/ui-lib/src/index"],
       "@mqs/core-lib/*": ["../../../packages/core-lib/src/*"],
       "@mqs/core-lib": ["../../../packages/core-lib/src/index"],
-      "@mqs/db-main-prisma": ["../../../packages/db-main-prisma/src/index"]
+      "@mqs/db-main-prisma": ["../../../packages/db-main-prisma/src/index"],
+      "@mqs/lint-staged": ["../../../packages/lint-staged/src/index"]
     }
   },
   "exclude": ["**/node_modules", "**/.*/", ".next", ".out"],

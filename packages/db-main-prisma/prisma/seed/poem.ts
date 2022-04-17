@@ -3,9 +3,10 @@ import type { Prisma } from '@prisma/client';
 import keywordExtractor from 'keyword-extractor';
 import { slugify } from 'transliteration';
 
-export const postCreateInputs: Prisma.PostCreateInput[] = new Array(10)
+export const poemCreateInputs: Prisma.PoemCreateInput[] = new Array(10)
   .fill(null)
   .map(() => {
+    const author = loremIpsum({ count: 2, units: 'words' });
     const title = loremIpsum({ count: 6, units: 'words' });
     const slug = slugify(title);
     const content = loremIpsum({ count: 6, units: 'paragraphs' });
@@ -18,9 +19,20 @@ export const postCreateInputs: Prisma.PostCreateInput[] = new Array(10)
     const image = unsplashImageURI({ keywords });
 
     return {
+      author,
       content,
       image,
       slug,
+      keywords: {
+        create: keywords.map((keyword) => ({
+          keyword: {
+            connectOrCreate: {
+              create: { name: keyword },
+              where: { name: keyword },
+            },
+          },
+        })),
+      },
       title,
     };
   });

@@ -1,5 +1,6 @@
 import type { Prisma } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
+import { poemCreateInputs } from './poem';
 import { postCreateInputs } from './post';
 import { userCreateInputs } from './user';
 
@@ -16,6 +17,21 @@ async function seed() {
       create: userCreateInput,
     });
     console.log(`Created or updated user with id: ${user.id}`);
+  }
+
+  for (const poemCreateInput of poemCreateInputs) {
+    const payload: Prisma.PoemCreateInput = {
+      ...poemCreateInput,
+    };
+
+    await prisma.poem.upsert({
+      where: {
+        slug: payload.slug,
+      },
+      update: payload,
+      create: payload,
+    });
+    console.log(`Created or updated poem with slug: ${payload.slug}`);
   }
 
   for (const postCreateInput of postCreateInputs) {

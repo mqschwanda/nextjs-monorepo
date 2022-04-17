@@ -1,11 +1,9 @@
 import type { PostQueryData } from '@mqs/graphql-client';
 import {
   Card,
-  CardActions,
   CardContent,
   CardHeader,
   CardMedia,
-  Chip,
   Skeleton,
   Typography,
 } from '@mqs/ui-lib';
@@ -18,7 +16,7 @@ type DemoApiSectionCardProps = {
 };
 
 export const DemoApiSectionCard: FC<DemoApiSectionCardProps> = ({ post }) => {
-  const { keywords, title, content, image, author }: Post = post;
+  const { title, content, image, author }: Post = post;
 
   return (
     <Card>
@@ -45,11 +43,6 @@ export const DemoApiSectionCard: FC<DemoApiSectionCardProps> = ({ post }) => {
           )}
         </Typography>
       </CardContent>
-      <CardActions>
-        {keywords?.map((keyword) => (
-          <Chip color="primary" key={keyword} label={`#${keyword}`} />
-        ))}
-      </CardActions>
     </Card>
   );
 };
