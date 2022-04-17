@@ -6,7 +6,7 @@ done through [atlassian/changesets](https://github.com/atlassian/changesets).
 
 Apps:
 
-- [web-app/CHANGELOG.md](./apps/web-app/CHANGELOG.md)
+- [nextjs-app/CHANGELOG.md](./apps/nextjs-app/CHANGELOG.md)
 
 Packages:
 

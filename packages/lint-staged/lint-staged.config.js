@@ -7,7 +7,7 @@
  * {@link https://github.com/mqschwanda/nextjs-monorepo/blob/main/packages/lint-staged/README.md}
  */
 
-const { concatFilesForPrettier, getEslintFixCmd } = require('@mqs/lint-staged');
+const { concatFilesForPrettier, getEslintFixCmd } = require('./src/index.js');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}

@@ -5,7 +5,15 @@
 
 module.exports = {
   root: true,
-  extends: ['plugin:@mqs/eslint-plugin/base'],
+  extends: [
+    '@mqs/eslint-config-bases/typescript',
+    '@mqs/eslint-config-bases/sonar',
+    '@mqs/eslint-config-bases/regexp',
+    '@mqs/eslint-config-bases/jest',
+    '@mqs/eslint-config-bases/graphql-schema',
+    // Apply prettier and disable incompatible rules
+    '@mqs/eslint-config-bases/prettier',
+  ],
   overrides: [
     {
       files: ['src/schema/index.ts'],

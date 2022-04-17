@@ -22,7 +22,7 @@ export const typeDefs = gql`
     id: Int!
     firstName: String
     lastName: String
-    username: String!
+    nickname: String!
     email: String!
     image: String
     emailVerifiedAt: String

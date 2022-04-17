@@ -9,8 +9,7 @@
     "incremental": true,
     "paths": {
       "@mqs/core-lib/*": ["../../../packages/core-lib/src/*"],
-      "@mqs/core-lib": ["../../../packages/core-lib/src/index"],
-      "@mqs/lint-staged": ["./src/index"]
+      "@mqs/core-lib": ["../../../packages/core-lib/src/index"]
     }
   },
   "exclude": ["**/node_modules", "**/.*/"]

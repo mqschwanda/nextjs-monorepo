@@ -1,6 +1,6 @@
 {
   "name": "@mqs/core-lib",
-  "version": "3.11.0",
+  "version": "3.13.0",
   "license": "MIT",
   "private": true,
   "homepage": "https://github.com/mqschwanda/nextjs-monorepo",
@@ -31,30 +31,9 @@
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "dependencies": {
-    "@tsed/exceptions": "^6.112.0",
-    "dequal": "^2.0.2",
+    "@tsed/exceptions": "^6.100.3",
+    "dequal": "^2.0.0",
     "lorem-ipsum": "2.0.4"
-  },
-  "devDependencies": {
-    "@mqs/eslint-plugin": "workspace:^",
-    "@mqs/lint-staged": "workspace:^",
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.0.1",
-    "@testing-library/react-hooks": "7.0.2",
-    "@types/jest": "27.4.1",
-    "@types/node": "17.0.23",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
-    "cross-env": "7.0.3",
-    "eslint": "8.13.0",
-    "jest": "27.5.1",
-    "microbundle": "0.14.2",
-    "prettier": "2.6.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "rimraf": "3.0.2",
-    "ts-jest": "27.1.4",
-    "typescript": "4.6.3"
   },
   "peerDependencies": {
     "react": "^17.0.2 || ^18.0.0",
@@ -67,5 +46,26 @@
     "react-dom": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "@mqs/eslint-config-bases": "workspace:^",
+    "@mqs/lint-staged": "workspace:^",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.0.1",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/jest": "27.4.1",
+    "@types/node": "17.0.24",
+    "@types/react": "18.0.5",
+    "@types/react-dom": "18.0.1",
+    "cross-env": "7.0.3",
+    "eslint": "8.13.0",
+    "jest": "27.5.1",
+    "microbundle": "0.14.2",
+    "prettier": "2.6.2",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "rimraf": "3.0.2",
+    "ts-jest": "27.1.4",
+    "typescript": "4.6.3"
   }
 }

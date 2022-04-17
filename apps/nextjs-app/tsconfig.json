@@ -1,0 +1,45 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "incremental": true,
+    "paths": {
+      "@/types.d/*": ["./types.d/*"],
+      "@/test-utils": ["../config/jest/test-utils"],
+      "@/config/*": ["./config/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/components/*": ["./components/*"],
+      "@/components": ["./components"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/layouts/*": ["./layouts/*"],
+      "@/partials/*": ["./partials/*"],
+      "@/backend/*": ["./backend/*"],
+      "@/features/*": ["./features/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/public/*": ["../public/*"],
+      "@/themes/*": ["./themes/*"],
+      "@mqs/ui-lib/*": ["../../../packages/ui-lib/src/*"],
+      "@mqs/ui-lib": ["../../../packages/ui-lib/src/index"],
+      "@mqs/core-lib/*": ["../../../packages/core-lib/src/*"],
+      "@mqs/core-lib": ["../../../packages/core-lib/src/index"],
+      "@mqs/db-main-prisma": ["../../../packages/db-main-prisma/src/index"],
+      "@mqs/lint-staged": ["../../../packages/lint-staged/src/index"]
+    }
+  },
+  "exclude": ["**/node_modules", "**/.*/", ".next", ".out"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.json"
+  ]
+}

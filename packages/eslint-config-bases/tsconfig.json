@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "incremental": true,
+    "allowJs": true,
+    "checkJs": true,
+    "paths": {
+      "@mqs/lint-staged": ["../../../packages/lint-staged/src/index"]
+    }
+  },
+  "exclude": ["**/node_modules", "**/.*/", "dist", "build"]
+}

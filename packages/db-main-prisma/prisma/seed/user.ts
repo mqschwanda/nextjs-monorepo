@@ -5,6 +5,6 @@ export const userCreateInputs: Prisma.UserCreateInput[] = [
     email: 'mqschwanda@gmail.com',
     firstName: 'Mark',
     lastName: 'Schwanda',
-    username: 'mqschwanda',
+    nickname: 'mqschwanda',
   },
 ];

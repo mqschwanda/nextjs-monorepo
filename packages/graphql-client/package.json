@@ -27,7 +27,7 @@
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "devDependencies": {
-    "@mqs/eslint-plugin": "workspace:^",
+    "@mqs/eslint-config-bases": "workspace:^",
     "@mqs/lint-staged": "workspace:^",
     "@types/jest": "27.4.1",
     "@types/node": "17.0.23",

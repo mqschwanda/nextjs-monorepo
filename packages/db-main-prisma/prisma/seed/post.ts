@@ -20,7 +20,6 @@ export const postCreateInputs: Prisma.PostCreateInput[] = new Array(10)
     return {
       content,
       image,
-      keywords,
       slug,
       title,
     };
